@@ -20,11 +20,6 @@ particlesJS('content',
         },
         "polygon": {
           "nb_sides": 3
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
         }
       },
       "opacity": {
@@ -56,7 +51,7 @@ particlesJS('content',
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 4,
         "direction": "top-right",
         "random": true,
         "straight": true,
@@ -112,3 +107,52 @@ particlesJS('content',
   }
 );
 /*particles-js CONFIG*/
+
+/*SIMPLE BAR*/
+document.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById('page');
+  const simpleBar = new SimpleBar(target, {autoHide: false});
+});
+/*(() => {
+  console.log('sdsdsds');
+})();*/
+/*SIMPLE BAR*/
+
+/*AGE*/
+document.addEventListener("DOMContentLoaded", () => {
+  const birthday = new Date(2000, 10, 23);
+  document.getElementById('htmlAge').innerText = Math.floor((new Date().getTime() - birthday.getTime()) / 86400000 / 365);
+});
+/*AGE*/
+
+/*LANGUAGES*/
+const language = {
+  ru: {
+    'textName': 'Искра Юрий, ',
+    'textAge': ' лет. ',
+    'textProfession': 'Веб-разработчик.',
+  },
+  us: {
+    'textName': 'Iskra Yurii, ',
+    'textAge': ' years. ',
+    'textProfession': 'Web developer.',
+  }
+};
+
+const setLanguage = language => {
+  for (let element in language) {
+    document.getElementById(element).innerText = language[element];
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  setLanguage(language.ru);
+});
+
+document.getElementById('languageRu').addEventListener('click', () => {
+  setLanguage(language.ru);
+});
+document.getElementById('languageUs').addEventListener('click', () => {
+  setLanguage(language.us);
+});
+/*LANGUAGES*/
