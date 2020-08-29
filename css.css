@@ -9,7 +9,7 @@
 
 body {
   font-family: Arimo, Arial;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -63,10 +63,11 @@ body {
 .content {
   margin: 40px 20px 30px 2px;
   border: 1px solid rgb(200, 200, 200);
-  padding: 10px 15px;
+  padding: 20px 15px;
   background: #fff;
   text-align: justify;
   border-radius: 10px;
+  line-height: 1.6;
 }
 
 .content:first-child {
@@ -75,6 +76,22 @@ body {
 
 .content:last-child {
   margin-bottom: 200px;
+}
+
+#textClickToCopy, #textClickToCopyEmail {
+  cursor: pointer;
+}
+
+a {
+  color: #1A68CC;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2, ul, h1 {
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
