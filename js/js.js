@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const target = document.getElementById('page');
   const simpleBar = new SimpleBar(target, {autoHide: false});
 });
+
 /*(() => {
   console.log('sdsdsds');
 })();*/
